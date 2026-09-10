@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <header>
+        <nav>
+        <ul>
+            <li>
+                <a href="index.html"><img src="images/DnD-Emblem.png" alt="Loho" width="160" height="90"></a>
+            </li>
+            <li><a href="O sebe.html">O sebe</a></li>
+            <li>
+                <a href="">Competensii</a>
+            </li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="form.html">Kontakti</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <form>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" pattern="[A-z]+">
+        </div>
+        <div>
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="theme">What are you asking about?</label><br>
+            <select name="theme" id="theme">
+                <option value="work">Robota</option>
+                <option value="coop">Up to 4 players in a Co-Op PvE experience</option>
+                <option value="no_work">Ne robota (veselie)</option>
+            </select>
+        </div>
+        <div>
+            <div>How would you prefer for us to reach back to you?</div>
+            <label for="rpl_mail"><input type="radio" name="rpl" id="rpl_mail"> Via mail</label>
+            <br>
+            <label for="rpl_phone"><input type="radio" name="rpl" id="rpl_phone"> Via phone</label>
+            <br>
+            <label for="rpl_none"><input type="radio" name="rpl" id="rpl_none"> Don't reach back</label>
+        </div>
+        <div>
+            <div>One last question</div>
+            <label for="chb1"><input type="checkbox" name="chb1" id="chb1">pancakes</label>
+            <br>
+            <label for="chb2"><input type="checkbox" name="chb2" id="chb2">waffles</label>
+        </div>
+        <div>
+            <label for="more">More Voprosii, Comrade?</label><br>
+            <textarea name="more" id="free_type" cols="40" rows="10"></textarea></div>
+        <div><input type="submit" value="send"></div>
+    </form>
+</body>
+</html>
