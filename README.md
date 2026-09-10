@@ -1,1 +1,1 @@
-#Web-technologies task from seminars
+# Web-technologies task from seminars
