@@ -25,18 +25,19 @@
     </nav>
     </header>
 
-    <form>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" pattern="[A-z]+">
+    <form class="form">
+        <div class="flex-input-text">
+            <label for="name"><div>Name:</div>
+            <div><input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange"></div>
+            </label>
         </div>
-        <div>
+        <div class="flex-input-text">
             <label for="email">E-Mail:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" class="inputOrange">
         </div>
         <div>
             <label for="theme">What are you asking about?</label><br>
-            <select name="theme" id="theme">
+            <select name="theme" id="theme" class="droplistOrange">
                 <option value="work">Robota</option>
                 <option value="coop">Up to 4 players in a Co-Op PvE experience</option>
                 <option value="no_work">Ne robota (veselie)</option>
@@ -58,9 +59,9 @@
         </div>
         <div>
             <label for="more">More Voprosii, Comrade?</label><br>
-            <textarea name="more" id="free_type" cols="40" rows="10" class="inputOrange"></textarea>
+            <textarea name="more" id="free_type" cols="40" rows="10"></textarea>
         </div>
-        <div><input type="submit" value="send"></div>
+        <div><input type="submit" value="send" class="buttonOrange"></div>
     </form>
 </body>
 </html>

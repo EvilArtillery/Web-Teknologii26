@@ -1,3 +1,40 @@
 .inputOrange{
-    background-color: orange;
+    background-color: wheat;
+    border-color: orange;
+    border-style: inset;
+    border-width: 3px;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    margin: 5px auto;
+}
+
+.form{
+    border-style: double;
+    border-color: orange;
+    border-radius: 40px;
+    border-width: 5px;
+    width: 400px;
+}
+
+.droplistOrange{
+    background-color: wheat;
+    border-radius: 15px;
+    border-color: orange;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.buttonOrange{
+    background-color: wheat;
+    border-color: orange;
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+
+.flex-input-text{
+    display: flex;
 }
