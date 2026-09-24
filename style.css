@@ -9,12 +9,23 @@
     margin: 5px auto;
 }
 
+.header{
+    background-color: rgba(128, 64, 64, 255);
+}
+
+.footer{
+    background-color: green;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
 .form{
-    border-style: double;
+    border-style: solid;
     border-color: orange;
     border-radius: 40px;
     border-width: 5px;
-    width: 400px;
+    width: 50%;
+    margin: auto;
 }
 
 .droplistOrange{
@@ -37,4 +48,21 @@
 
 .flex-input-text{
     display: flex;
+}
+
+.ul-nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.list-item{
+    width: 160px;
+    height: 94px;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
 }

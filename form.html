@@ -5,30 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    
 
-    <header>
+
+    <header class="header">
         <nav>
-        <ul>
-            <li>
-                <a href="index.html"><img src="images/DnD-Emblem.png" alt="Loho" width="160" height="90"></a>
-            </li>
-            <li><a href="O sebe.html">O sebe</a></li>
-            <li>
-                <a href="">Competensii</a>
-            </li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="form.html">Kontakti</a></li>
-        </ul>
-    </nav>
+            <ul class="ul-nav-flex">
+                <li class="list-item">
+                    <a href="index.html"><img src="images/DnD-Emblem.png" alt="Loho" width="160" height="90"></a>
+                </li>
+                <li class="list-item"><a href="O sebe.html">O sebe</a></li>
+                <li class="list-item">
+                    <a href="">Competensii</a>
+                </li>
+                <li class="list-item"><a href="">Portfolio</a></li>
+                <li class="list-item"><a href="form.html">Kontakti</a></li>
+            </ul>
+        </nav>
     </header>
 
     <form class="form">
         <div class="flex-input-text">
-            <label for="name"><div>Name:</div>
-            <div><input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange"></div>
+            <label for="name">
+                <div>Name:</div>
+                <div><input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange"></div>
             </label>
         </div>
         <div class="flex-input-text">
@@ -59,9 +61,13 @@
         </div>
         <div>
             <label for="more">More Voprosii, Comrade?</label><br>
-            <textarea name="more" id="free_type" cols="40" rows="10"></textarea>
+            <textarea name="more" id="free_type" cols="40" rows="10" style="border: 2px solid black"></textarea>
         </div>
         <div><input type="submit" value="send" class="buttonOrange"></div>
     </form>
+    <footer class="footer">
+        Сайт разработан ООО Челики 2026 все райтс ресервд
+        <img src="images/2XQh0BX_LVs1.jpg" alt="Sots seti" width="100">
+    </footer>
 </body>
 </html>
