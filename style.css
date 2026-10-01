@@ -1,6 +1,6 @@
 .inputOrange{
-    background-color: wheat;
-    border-color: orange;
+    background-color: antiquewhite;
+    border-color: lightblue;
     border-style: inset;
     border-width: 3px;
     border-radius: 10px;
@@ -10,35 +10,40 @@
 }
 
 .header{
-    background-color: rgba(128, 64, 64, 255);
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
 .footer{
-    background-color: green;
-    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    position: fixed;
     width: 100%;
     bottom: 0px;
 }
 .form{
     border-style: solid;
-    border-color: orange;
+    border-color: lightblue;
     border-radius: 40px;
     border-width: 5px;
-    width: 50%;
-    margin: auto;
+    width: 30%;
+    margin: 100px auto;
+    background-color: whitesmoke;
 }
 
 .droplistOrange{
-    background-color: wheat;
+    background-color: antiquewhite;
     border-radius: 15px;
-    border-color: orange;
+    border-color: lightblue;
     border-style: solid;
     border-width: 1px;
 }
 
 .buttonOrange{
-    background-color: wheat;
-    border-color: orange;
+    background-color: antiquewhite;
+    border-color: lightblue;
     border-style: outset;
     border-width: 3px;
     border-radius: 10px;
@@ -46,8 +51,10 @@
     height: 30px;
 }
 
-.flex-input-text{
+.flex-input{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ul-nav-flex {
@@ -60,9 +67,19 @@
 
 .list-item{
     width: 160px;
-    height: 94px;
-    text-align: center;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
+    height: 20px;
+    margin: 25px auto;
+    text-align: left;
+    border-style: none none none solid;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 0px 10px;
+}
+
+.link-header{
+    color: whitesmoke;
+}
+
+.body{
+    background-color: midnightblue;
 }

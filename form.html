@@ -7,37 +7,37 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="reset.css">
 </head>
-<body>
+<body class="body">
 
 
     <header class="header">
         <nav>
             <ul class="ul-nav-flex">
-                <li class="list-item">
+                <li>
                     <a href="index.html"><img src="images/DnD-Emblem.png" alt="Loho" width="160" height="90"></a>
                 </li>
-                <li class="list-item"><a href="O sebe.html">O sebe</a></li>
+                <li class="list-item"><a href="O sebe.html" class="link-header">O sebe</a></li>
                 <li class="list-item">
-                    <a href="">Competensii</a>
+                    <a href="" class="link-header">Competensii</a>
                 </li>
-                <li class="list-item"><a href="">Portfolio</a></li>
-                <li class="list-item"><a href="form.html">Kontakti</a></li>
+                <li class="list-item"><a href="" class="link-header">Portfolio</a></li>
+                <li class="list-item"><a href="form.html" class="link-header">Registratsia</a></li>
             </ul>
         </nav>
     </header>
 
     <form class="form">
-        <div class="flex-input-text">
+        <div class="flex-input">
             <label for="name">
-                <div>Name:</div>
-                <div><input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange"></div>
+                Name: <input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange">
             </label>
         </div>
-        <div class="flex-input-text">
-            <label for="email">E-Mail:</label>
-            <input type="email" name="email" id="email" class="inputOrange">
+        <div class="flex-input">
+            <label for="email">
+                E-Mail: <input type="email" name="email" id="email" class="inputOrange">
+            </label>
         </div>
-        <div>
+        <div class="flex-input">
             <label for="theme">What are you asking about?</label><br>
             <select name="theme" id="theme" class="droplistOrange">
                 <option value="work">Robota</option>
@@ -45,28 +45,25 @@
                 <option value="no_work">Ne robota (veselie)</option>
             </select>
         </div>
-        <div>
+        <div class="flex-input">
             <div>How would you prefer for us to reach back to you?</div>
             <label for="rpl_mail"><input type="radio" name="rpl" id="rpl_mail"> Via mail</label>
-            <br>
             <label for="rpl_phone"><input type="radio" name="rpl" id="rpl_phone"> Via phone</label>
-            <br>
             <label for="rpl_none"><input type="radio" name="rpl" id="rpl_none"> Don't reach back</label>
         </div>
-        <div>
+        <div class="flex-input">
             <div>One last question</div>
             <label for="chb1"><input type="checkbox" name="chb1" id="chb1">pancakes</label>
-            <br>
             <label for="chb2"><input type="checkbox" name="chb2" id="chb2">waffles</label>
         </div>
-        <div>
+        <div class="flex-input">
             <label for="more">More Voprosii, Comrade?</label><br>
-            <textarea name="more" id="free_type" cols="40" rows="10" style="border: 2px solid black"></textarea>
+            <textarea name="more" id="free_type" cols="40" rows="10" style="border: 2px solid black; background-color: antiquewhite;"></textarea>
         </div>
-        <div><input type="submit" value="send" class="buttonOrange"></div>
+        <div class="flex-input"><input type="submit" value="send" class="buttonOrange"></div>
     </form>
     <footer class="footer">
-        Сайт разработан ООО Челики 2026 все райтс ресервд
+        Сайт разработан ООО Гайс 2026 все райтс ресервд
         <img src="images/2XQh0BX_LVs1.jpg" alt="Sots seti" width="100">
     </footer>
 </body>
