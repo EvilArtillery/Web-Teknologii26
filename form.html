@@ -23,10 +23,14 @@
                 <li class="list-item"><a href="" class="link-header">Portfolio</a></li>
                 <li class="list-item"><a href="form.html" class="link-header">Registratsia</a></li>
             </ul>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
         </nav>
     </header>
 
-    <form class="form">
+    <form class="form" id="feedback">
         <div class="flex-input">
             <label for="name">
                 Name: <input type="text" name="name" id="name" pattern="[A-z]+" class="inputOrange">
@@ -47,21 +51,22 @@
         </div>
         <div class="flex-input">
             <div>How would you prefer for us to reach back to you?</div>
-            <label for="rpl_mail"><input type="radio" name="rpl" id="rpl_mail"> Via mail</label>
-            <label for="rpl_phone"><input type="radio" name="rpl" id="rpl_phone"> Via phone</label>
-            <label for="rpl_none"><input type="radio" name="rpl" id="rpl_none"> Don't reach back</label>
+            <label for="rpl_mail"><input type="radio" name="rpl" id="rpl_mail" value="By mail"> Via mail</label>
+            <label for="rpl_phone"><input type="radio" name="rpl" id="rpl_phone" value="By phone"> Via phone</label>
+            <label for="rpl_none"><input type="radio" name="rpl" id="rpl_none" value="None"> Don't reach back</label>
         </div>
         <div class="flex-input">
             <div>One last question</div>
-            <label for="chb1"><input type="checkbox" name="chb1" id="chb1">pancakes</label>
-            <label for="chb2"><input type="checkbox" name="chb2" id="chb2">waffles</label>
+            <label for="chb1"><input type="checkbox" name="chb1" id="chb1" value="pancakes ">pancakes</label>
+            <label for="chb2"><input type="checkbox" name="chb2" id="chb2" value="waffles">waffles</label>
         </div>
         <div class="flex-input">
             <label for="more">More Voprosii, Comrade?</label><br>
             <textarea name="more" id="free_type" cols="40" rows="10" style="border: 2px solid black; background-color: antiquewhite;"></textarea>
         </div>
-        <div class="flex-input"><input type="submit" value="send" class="buttonOrange"></div>
+        <div class="flex-input"><input type="submit"></div>
     </form>
+    
 
     <form class="form">
         <div class="flex-input">
@@ -87,17 +92,69 @@
     </div>
 
     <script>
+        document.forms[0].addEventListener('submit', function(event){
+            event.preventDefault();
+            feedback_handler();
+            console.log("JS blocked form send");
+        })
+
         function func(){
             let div = document.createElement('div');
             div.className = 'form';
             div.innerHTML = "<img src=\"images/DnD-Emblem.png\" alt=\"Loho\" width=\"160\" height=\"90\">";
             let title = document.getElementById("news-title");
-            div.innerHTML += title.innerText;
+            div.innerHTML += title.value;
             div.innerHTML += "<textarea readonly name=\"news-text\" id=\"news-text\" cols=\"40\" rows=\"10\" style=\"border: 2px solid black; background-color: antiquewhite;\"></textarea> <br>"
             let now = new Date();
             div.innerHTML += now;
-            div.innerHTML += "<br> Author: Anon"
+            div.innerHTML += "<br>Author: Anon"
             document.body.append(div);
+        }
+        function feedback_handler() {
+            let div = document.createElement('div');
+            div.className = 'form';
+            let feedback_form = document.getElementById('feedback');
+            div.innerHTML = "<div class=\"flex-input\">";
+                div.innerHTML += "Name: ";
+                div.innerHTML += feedback_form.name.value;
+            div.innerHTML += "</div>";
+            div.innerHTML += "<div class=\"flex-input\">";
+                div.innerHTML += "E-Mail: ";
+                div.innerHTML += feedback_form.email.value;
+            div.innerHTML += "</div>";
+            div.innerHTML += "<div class=\"flex-input\">";
+                div.innerHTML += "Feedback theme: ";
+                div.innerHTML += feedback_form.theme.value;
+            div.innerHTML += "</div>";
+            div.innerHTML += "<div class=\"flex-input\">";
+                div.innerHTML += "Reachback: ";
+                for (let index = 0; index < document.getElementsByName('rpl').length; index++) {
+                    const element = document.getElementsByName('rpl')[index];
+                    if (element.checked) {
+                        div.innerHTML += element.value;
+                        break;
+                    }
+                }
+            div.innerHTML += "</div>";
+            div.innerHTML += "<div class=\"flex-input\">";
+                div.innerHTML += "Interests: ";
+                let chb_amount = 0;
+                for (let index = 1; index < 3; index++) {
+                    const element = document.getElementById('chb'+index)
+                    if (element.checked) {
+                        div.innerHTML += element.value;
+                        chb_amount ++;
+                    }
+                }
+                if (0 == chb_amount) div.innerHTML += "none";
+            div.innerHTML += "</div>";
+            if (feedback_form.free_type.value) {
+                div.innerHTML += "<div class=\"flex-input\">";
+                    div.innerHTML += "Additional feedback: ";
+                    div.innerHTML += feedback_form.free_type.value;
+                div.innerHTML += "</div>";
+            }
+            feedback_form.after(div);
         }
     </script>
     <footer class="footer">
